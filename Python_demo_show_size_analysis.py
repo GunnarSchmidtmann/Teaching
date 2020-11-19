@@ -37,19 +37,9 @@ plt.show()
 mean_male, std_male=norm.fit(male['Shoe Size.1'])
 mean_female, std_female=norm.fit(female['Shoe Size.1'])
 
-# plot histograms 
-plt.figure(2)
-plt.hist(male['Shoe Size.1'],color = "g",normed=True,bins=10, alpha=0.5, label="male")
-plt.hist(female['Shoe Size.1'],color = "r",normed=True, bins=10, alpha=0.5, label="female")
-plt.xlabel('Shoe Size',fontsize=20)
-plt.ylabel('Frequency',fontsize=20)
-plt.xlim(0, 15)
-plt.grid(True)
-plt.savefig('histogram.eps', format='eps')
-plt.show() 
 
 # fit normal distribution
-plt.figure(3)
+plt.figure(2)
 sns.set_style("whitegrid")
 sns.distplot(male['Shoe Size.1'],fit=norm,bins=10,kde=False,color='g')
 sns.distplot(female['Shoe Size.1'],fit=norm,bins=10,kde=False,color='r')
@@ -58,12 +48,3 @@ plt.ylabel('Frequency',fontsize=20)
 plt.xlim(0, 15)
 plt.savefig('histfit.eps')
 plt.show()
-
-
-
-
-
-
-
-
-
