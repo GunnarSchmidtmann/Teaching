@@ -1,9 +1,4 @@
-"""
-Created on Fri Oct 30 10:50:30 2020
-
-@author: gunnarschmidtmann
-"""
-# Gunnar Schmidtmann, University of Plymouth, November 2020
+# Gunnar Schmidtmann, University of Plymouth, April 2021
 # Create a subfolder 'Data'
 # import required packages
 
@@ -48,3 +43,17 @@ plt.ylabel('Frequency',fontsize=20)
 plt.xlim(0, 15)
 plt.savefig('histfit.eps')
 plt.show()
+
+# generate box plot with individual data superimposed
+plt.figure(3)
+sns.boxplot(x='Sex', y='Shoe Size.1', notch= True, data=df,palette="Set2")
+sns.stripplot(x="Sex", y="Shoe Size.1", data=df, jitter=True,zorder=1)
+plt.ylabel('Shoe Size',fontsize=20)
+plt.ylim(0, 15)
+
+# generate violin plots with individual superimposed data
+plt.figure(4)
+sns.violinplot(x="Sex", y="Shoe Size.1", data=df, palette="Set2")
+sns.stripplot(x="Sex", y="Shoe Size.1", data=df, jitter=True,zorder=1)
+plt.ylabel('Shoe Size',fontsize=20)
+plt.ylim(0, 15)
