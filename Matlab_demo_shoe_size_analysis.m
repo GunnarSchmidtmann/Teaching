@@ -6,7 +6,7 @@ clc
 commandwindow
 
 
-%%% create a sepearte data folder whcih should contain the 'shoe_size.xlsx' data file
+%%% create a separate data folder whcih should contain the 'shoe_size.xlsx' data file
 
 
 %%% set directories and read the data
